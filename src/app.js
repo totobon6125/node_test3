@@ -16,6 +16,10 @@ app.get("/", (req, res) => {
   return res.json({ message: "환영 합니당!@." })
 })
 
+app.get("/api", (req, res) => {
+  return res.json({ message: "url 뒤에 /posts 를 넣어주세요~" })
+})
+
 app.use('/api', [postsRouter]);
 
 app.listen(PORT, () => {
